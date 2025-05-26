@@ -11,24 +11,6 @@
   <body>
     <div class="coffee_main">
       <div class="coffee_main_overlay"></div>
-      <header>
-        <a href="/" class="logo">
-          <img src="logo.svg" alt="Smoke&Brew" />
-        </a>
-        <nav class="desktop_menu">
-          <a href="#menu">Меню</a>
-          <a href="#vapes">Вейпы</a>
-          <a href="#actions">Акции</a>
-          <a href="#contacts">Контакты</a>
-        </nav>
-
-        <nav class="mobile_header">
-          <a href="/" class="logo">
-            <img src="logo.svg" alt="Coffee & Vape" />
-          </a>
-          <button class="burger">☰</button>
-        </nav>
-      </header>
       <main>
         <div class="coffee_main_content">
           <h1>
@@ -48,8 +30,8 @@
           ></path>
         </svg>
         <div class="about">
-          <h2>О нас</h2>
-          <p>Описание</p>
+          <h3 class="vape_header">О нас</h3>
+          <h3 class="vape_text">Описание</h3>
           <div class="coffee_cards">
             <div class="card">
               <img src="./img/card1.jpg" alt="card1" />
@@ -64,8 +46,8 @@
                 ></path>
               </svg>
               <div class="card_text">
-                <h3>Название</h3>
-                <p>Описание</p>
+                <h3>Кофе</h3>
+                <p>Самый лучший кофе в мире</p>
               </div>
               <button class="btn button">Подробнее</button>
             </div>
@@ -82,8 +64,8 @@
                 ></path>
               </svg>
               <div class="card_text">
-                <h3>Название</h3>
-                <p>Описание</p>
+                <h3>Интерьер</h3>
+                <p>Самая красивая кофейня на всей земле</p>
               </div>
               <button class="btn button">Подробнее</button>
             </div>
@@ -100,8 +82,8 @@
                 ></path>
               </svg>
               <div class="card_text">
-                <h3>Название</h3>
-                <p>Описание</p>
+                <h3>Латте арт</h3>
+                <p>Воплотим все ваши фантазии</p>
               </div>
               <button class="btn button">Подробнее</button>
             </div>
@@ -147,7 +129,26 @@
             </p>
             <button class="btn open-modal-btn">Больше информации</button>
           </div>
-          <img src="./img/vape.jpg" alt="ceeds" />
+          <div class="slider-block vape-slider">
+            <div class="slider-container">
+              <div class="slider-track">
+                <div class="slide">
+                  <img src="./img/card1.jpg" alt="Вейп 1" />
+                </div>
+                <div class="slide">
+                  <img src="./img/card2.jpg" alt="Вейп 2" />
+                </div>
+                <div class="slide">
+                  <img src="./img/card3.jpg" alt="Вейп 3" />
+                </div>
+              </div>
+            </div>
+
+            <button class="slider-prev">❮</button>
+            <button class="slider-next">❯</button>
+
+            <div class="slider-dots"></div>
+          </div>
         </div>
         <div class="modal-overlay" id="modalOverlay">
           <div class="modal">

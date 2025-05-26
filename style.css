@@ -115,15 +115,15 @@ header {
 }
 
 .btn_cf {
-  background-color: var(--coffee-dark);
+  background-color: black;
   color: white;
   border: 3px white solid;
 }
 
 .btn_cf:hover {
-  background-color: white;
-  color: var(--coffee-dark);
-  border-color: var(--coffee-dark);
+  background-color: white !important;
+  color: var(--coffee-dark) !important;
+  border-color: var(--coffee-dark) !important;
 }
 
 .wave {

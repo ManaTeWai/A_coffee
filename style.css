@@ -182,6 +182,7 @@ header {
 .coffee_cards .card .button {
   margin-bottom: 20px;
   background-color: var(--coffee-light);
+  color: black;
 }
 
 .coffee_cards .card:hover {
@@ -501,6 +502,7 @@ header {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  color: black;
 }
 
 body.modal-open {

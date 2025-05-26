@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <title>Smoke&Brew</title>
   </head>
   <body>
@@ -30,8 +31,14 @@
       </header>
       <main>
         <div class="coffee_main_content">
-          <h1>Слоган</h1>
-          <p>Описание</p>
+          <h1>
+            Smoke&Brew - лучшее сочетание всего, что нужно для хорошего
+            настроения
+          </h1>
+          <p>
+            Уникальное сочетание кофе и вейпа в одном месте. Уютная атмосфера,
+            большой выбор, авторское кофе и уникальный вейп
+          </p>
           <button class="btn btn_cf">Подробнее</button>
         </div>
         <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
@@ -102,24 +109,31 @@
         </div>
         <div class="contact_1">
           <div class="contact_text">
-            <h3>Свяжитесь с нами</h3>
-            <p>Описание</p>
-            <button class="btn button">Подробнее</button>
+            <h3>Кофе</h3>
+            <p>
+              Мы делаем кофе с любовью, на профессиональном оборудовании из
+              натуральных зерен высшего качества
+            </p>
           </div>
           <img src="./img/contact1.jpeg" alt="contact1" />
         </div>
         <div class="ceeds">
           <div class="ceeds_text">
-            <h3>Зерна</h3>
+            <h3>Вейп</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem nihil voluptate neque quo necessitatibus dignissimos
-              voluptas illum explicabo quasi, maiores vel molestias sit corrupti
-              dicta aut libero. Voluptatum, minima nisi?
+              Различные виды вейпа, разные производители, оригинальные дудки
+              прямиком из-за рубежа специально для вашего хорошего настроения
             </p>
-            <button class="btn">Больше информации</button>
+            <button class="btn open-modal-btn">Больше информации</button>
           </div>
-          <img src="./img/contact1.jpeg" alt="ceeds" />
+          <img src="./img/vape.jpg" alt="ceeds" />
+        </div>
+        <div class="modal-overlay" id="modalOverlay">
+          <div class="modal">
+            <h2>Ваше модальное окно</h2>
+            <p>Содержимое модального окна...</p>
+            <button class="close-modal-btn">×</button>
+          </div>
         </div>
         <div class="ceeds_about">
           <div class="card">
@@ -164,20 +178,61 @@
           <h3 class="vape_text">Описание</h3>
           <div class="vape_cards">
             <div class="vape_card">
-              <h3>Вейп 1</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nisi deleniti ullam ducimus quos, assumenda eaque impedit asperiores cupiditate omnis placeat modi facere non maiores atque. Amet a vitae inventore.</p>
-              <button class="btn vape_btn">Вейп 1</button>
+              <h3>Без «химии»</h3>
+              <p>Жидкости только из пищевых компонентов</p>
+              <button class="btn vape_btn">Заказать</button>
             </div>
             <div class="vape_card">
-              <h3>Вейп 2</h3>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt labore deserunt ex nostrum tempora magnam ea harum maiores, iusto, autem quis natus fugiat eveniet repellat amet veritatis eligendi iure!</p>
-              <button class="btn vape_btn">Вейп 2</button>
+              <h3>Сверхёмкие аккумы</h3>
+              <p>30% больше тяги на одном заряде</p>
+              <button class="btn vape_btn">Заказать</button>
             </div>
             <div class="vape_card">
-              <h3>Вейп 3</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis beatae molestiae, repellendus optio molestias voluptas inventore quia provident doloremque vel dolore. Quia, consequatur neque! Tempore incidunt ea perferendis aperiam consequuntur.</p>
-              <button class="btn vape_btn">Вейп 3</button>
+              <h3>Секрет от шефа</h3>
+              <p>Авторские микс-жидкости с кофейными нотами</p>
+              <button class="btn vape_btn">Заказать</button>
             </div>
+          </div>
+        </div>
+        <div class="send_form">
+          <h3 class="send_form_header">Оставьте заявку</h3>
+          <form action="" class="send_form_form">
+            <input type="text" placeholder="Имя" />
+            <input type="text" placeholder="Почта" />
+            <button class="btn send_form_btn">Отправить</button>
+          </form>
+        </div>
+        <div class="map">
+          <div style="position: relative; overflow: hidden">
+            <a
+              href="https://yandex.ru/maps/org/smoke_brew/167717834957/?utm_medium=mapframe&utm_source=maps"
+              style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+              >Smoke&Brew</a
+            ><a
+              href="https://yandex.ru/maps/101271/mikhaylovsk/category/tobacco_and_smoking_accessories_shop/184107903/?utm_medium=mapframe&utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 14px;
+              "
+              >Магазин табака и курительных принадлежностей в Михайловске</a
+            ><a
+              href="https://yandex.ru/maps/101271/mikhaylovsk/category/coffee_shop/35193114937/?utm_medium=mapframe&utm_source=maps"
+              style="
+                color: #eee;
+                font-size: 12px;
+                position: absolute;
+                top: 28px;
+              "
+              >Кофейня в Михайловске</a
+            ><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=42.022389%2C45.134574&mode=poi&poi%5Bpoint%5D=42.022303%2C45.134413&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D167717834957&z=19.93"
+              height="400"
+              frameborder="1"
+              allowfullscreen="true"
+              style="position: relative; width: 100%"
+            ></iframe>
           </div>
         </div>
       </main>

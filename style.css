@@ -86,6 +86,19 @@ header {
   justify-content: center;
 }
 
+.coffee_main_content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.coffee_main_content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
 .btn {
   padding: 5px 10px;
   border-radius: 25px;
@@ -215,6 +228,7 @@ header {
 .ceeds {
   padding: 100px 200px;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
 }
@@ -347,33 +361,181 @@ header {
 }
 
 .vape_card:nth-child(1) {
-  background: url("./img/card1.jpg") no-repeat center center/cover;
+  background: url("./img/vape_card1.png") no-repeat center center/cover;
 }
 .vape_card:nth-child(2) {
-  background: url("./img/card2.jpg") no-repeat center center/cover;
+  background: url("./img/vape_card2.png") no-repeat center center/cover;
 }
 .vape_card:nth-child(3) {
-  background: url("./img/card3.jpg") no-repeat center center/cover;
+  background: url("./img/vape_card3.png") no-repeat center center/cover;
 }
 
 .vape_card h3 {
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 24px;
   color: white;
-  text-shadow: black 2px 0px, black 2px 2px, black 0px 2px, black -2px 2px,
-    black -2px 0px, black -2px -2px, black 0px -2px, black 2px -2px;
 }
 
 .vape_card p {
   margin: 0px 20px 20px 20px;
-  font-size: 20px;
+  font-size: 18px;
   color: white;
-  text-shadow: black 2px 0px, black 2px 2px, black 0px 2px, black -2px 2px,
-    black -2px 0px, black -2px -2px, black 0px -2px, black 2px -2px;
+  height: 30px;
 }
 
 .vape_card button {
   margin-bottom: 20px;
+  font-size: 18px;
+  color: white;
+  background-color: var(--coffee-accent);
+}
+
+.vape_card button:hover {
+  background-color: white !important;
+  color: var(--coffee-accent) !important;
+}
+
+.send_form {
+  background: url("./img/texture.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 0px;
+}
+
+.send_form_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.send_form_header {
+  font-size: 30px;
+}
+
+.send_form_btn {
+  background-color: white;
+  color: var(--coffee-accent);
+  border: 3px var(--coffee-accent) solid;
+  padding: 5px 10px;
+  border-radius: 25px;
+  transition: all 300ms;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.send_form_btn:hover {
+  background-color: var(--coffee-accent) !important;
+  color: white !important;
+  border: 3px white solid !important;
+}
+
+.send_form input {
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: 3px var(--coffee-accent) solid;
+  color: var(--coffee-accent);
+}
+
+.send_form input:focus {
+  outline: none;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.map div {
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+}
+
+/* CSS */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.closing {
+  animation: fadeOut 0.3s ease;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  animation: modalShow 0.3s ease;
+}
+
+.modal.closing {
+  animation: modalHide 0.3s ease;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes modalShow {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes modalHide {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50px);
+    opacity: 0;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -422,5 +584,28 @@ header {
   }
   .ceeds_about .card {
     margin: 20px;
+  }
+  .vape {
+    margin: auto;
+    padding: 0;
+  }
+  .send_form {
+    flex-direction: column;
+    height: auto;
+  }
+  .send_form_header {
+    margin-bottom: 10px;
+  }
+  .send_form_form {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .send_form_form input {
+    margin-bottom: 10px;
+  }
+  .modal {
+    max-width: 50%;
   }
 }

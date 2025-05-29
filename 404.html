@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена - 404</title>
+    <link rel="stylesheet" href="404styles.css"> <!-- Подключим CSS -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>Страница потерялась в космосе</h2>
+            <p>Запрошенная вами страница не существует или была удалена.</p>
+            
+            <!-- Динамическое отображение неверного URL -->
+            <p class="url-path" id="urlPath"></p>
+            
+            <div class="actions">
+                <a href="/" class="btn">На главную</a>
+                <button id="backBtn" class="btn">Назад</button>
+            </div>
+            
+            <!-- Анимация космоса -->
+            <div class="space-animation">
+                <div class="planet"></div>
+                <div class="rocket">🚀</div>
+                <div class="stars"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

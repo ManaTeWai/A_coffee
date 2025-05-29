@@ -113,6 +113,30 @@ p {
     animation: twinkle 3s infinite;
 }
 
+/* Стили для падающих звезд */
+.shooting-star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px #fff;
+    opacity: 0;
+    z-index: 10;
+}
+
+/* Анимация падающей звезды */
+@keyframes shooting-star {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(200px, 200px) scale(0.2);
+    }
+}
+
 /* Анимации */
 @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }

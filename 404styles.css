@@ -113,7 +113,8 @@ p {
     animation: twinkle 3s infinite;
 }
 
-/* Стили для падающих звезд */
+/* Убираем статичную анимацию shooting-star */
+/* Добавляем базовые стили для звезд */
 .shooting-star {
     position: absolute;
     width: 4px;
@@ -125,8 +126,55 @@ p {
     z-index: 10;
 }
 
-/* Анимация падающей звезды */
-@keyframes shooting-star {
+/* Добавим классы для разных направлений */
+.shooting-star.top-left {
+    animation: star-top-left 1s linear forwards;
+}
+.shooting-star.top-right {
+    animation: star-top-right 1s linear forwards;
+}
+.shooting-star.bottom-left {
+    animation: star-bottom-left 1s linear forwards;
+}
+.shooting-star.bottom-right {
+    animation: star-bottom-right 1s linear forwards;
+}
+
+/* Анимации для разных направлений */
+@keyframes star-top-left {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-200px, -200px) scale(0.2);
+    }
+}
+
+@keyframes star-top-right {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(200px, -200px) scale(0.2);
+    }
+}
+
+@keyframes star-bottom-left {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-200px, 200px) scale(0.2);
+    }
+}
+
+@keyframes star-bottom-right {
     0% {
         opacity: 1;
         transform: translate(0, 0) scale(1);
@@ -135,6 +183,75 @@ p {
         opacity: 0;
         transform: translate(200px, 200px) scale(0.2);
     }
+}
+
+/* Добавим еще 4 диагональных направления */
+.shooting-star.top-left-diag {
+    animation: star-top-left-diag 1s linear forwards;
+}
+.shooting-star.top-right-diag {
+    animation: star-top-right-diag 1s linear forwards;
+}
+.shooting-star.bottom-left-diag {
+    animation: star-bottom-left-diag 1s linear forwards;
+}
+.shooting-star.bottom-right-diag {
+    animation: star-bottom-right-diag 1s linear forwards;
+}
+
+/* Вертикальные и горизонтальные направления */
+.shooting-star.left {
+    animation: star-left 1s linear forwards;
+}
+.shooting-star.right {
+    animation: star-right 1s linear forwards;
+}
+.shooting-star.top {
+    animation: star-top 1s linear forwards;
+}
+.shooting-star.bottom {
+    animation: star-bottom 1s linear forwards;
+}
+
+@keyframes star-left {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-300px, 0) scale(0.2); }
+}
+
+@keyframes star-right {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(300px, 0) scale(0.2); }
+}
+
+@keyframes star-top {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(0, -300px) scale(0.2); }
+}
+
+@keyframes star-bottom {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(0, 300px) scale(0.2); }
+}
+
+/* Анимации для диагональных направлений */
+@keyframes star-top-left-diag {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-300px, -100px) scale(0.2); }
+}
+
+@keyframes star-top-right-diag {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(300px, -100px) scale(0.2); }
+}
+
+@keyframes star-bottom-left-diag {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-300px, 100px) scale(0.2); }
+}
+
+@keyframes star-bottom-right-diag {
+    0% { opacity: 1; transform: translate(0, 0) scale(1); }
+    100% { opacity: 0; transform: translate(300px, 100px) scale(0.2); }
 }
 
 /* Анимации */
